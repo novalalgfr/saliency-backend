@@ -1,0 +1,14 @@
+# Web Framework
+Flask==3.0.0
+Flask-CORS==4.0.0
+
+# Deep Learning Engine
+tensorflow==2.20.0
+
+# Image Processing
+opencv-python-headless==4.9.0.80
+Pillow==10.2.0
+numpy==1.26.3
+
+# Utilities
+python-dotenv==1.0.1 
