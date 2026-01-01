@@ -1,4 +1,3 @@
-````markdown
 # SalientVision - Backend (API)
 
 Backend service untuk sistem **Salient Object Detection** yang dibangun menggunakan **Flask** dan **TensorFlow**. Layanan ini bertugas menerima citra dari client, memprosesnya menggunakan model Deep Learning (U-Net), dan mengembalikan hasil berupa Binary Mask serta Visual Attention Heatmap.
@@ -23,7 +22,6 @@ backend/
     ├── image_processing.py  # Preprocessing & Heatmap generation
     └── model_loader.py      # Load model TensorFlow
 ```
-````
 
 ## 🚀 Cara Menjalankan (Local)
 
@@ -38,7 +36,6 @@ Disarankan menggunakan virtual environment agar library tidak konflik.
 ```bash
 python -m venv venv
 venv\Scripts\activate
-
 ```
 
 **Mac/Linux:**
@@ -46,26 +43,24 @@ venv\Scripts\activate
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-
 ```
 
 ### 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
-
 ```
 
 ### 3. Setup Model
 
 Pastikan file model `saliency_unet_model.keras` sudah diletakkan di dalam folder `models/`.
-_(Catatan: File model tidak disertakan di repository ini karena ukurannya yang besar dan batasan GitHub. Silakan hubungi pengembang untuk mendapatkan file model)._
+
+> **Catatan:** File model tidak disertakan di repository ini karena ukurannya yang besar dan batasan GitHub. Silakan hubungi pengembang untuk mendapatkan file model.
 
 ### 4. Jalankan Server
 
 ```bash
 python app.py
-
 ```
 
 Server akan berjalan di `http://127.0.0.1:5000`.
@@ -78,10 +73,11 @@ Menerima upload gambar dan mengembalikan hasil deteksi.
 
 - **URL:** `http://127.0.0.1:5000/predict`
 - **Method:** `POST`
-- **Body:** `form-data`
-- `file`: File gambar (JPG/PNG)
+- **Content-Type:** `multipart/form-data`
+- **Body:**
+  - `file`: File gambar (JPG/PNG)
 
-- **Response (JSON):**
+**Response (JSON):**
 
 ```json
 {
@@ -91,10 +87,10 @@ Menerima upload gambar dan mengembalikan hasil deteksi.
 }
 ```
 
+## 📝 Lisensi
+
+Project ini dikembangkan untuk keperluan edukasi dan penelitian.
+
 ---
 
-**Skripsi / Final Year Project**
-
-```
-
-```
+**© 2026 SalientVision**
