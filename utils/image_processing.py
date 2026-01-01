@@ -19,7 +19,8 @@ def create_binary_mask(pred_mask):
 
 def create_heatmap(pred_mask):
     heatmap_norm = (pred_mask * 255).astype(np.uint8)
-    heatmap_color = cv2.applyColorMap(heatmap_norm, cv2.COLORMAP_JET)
+    heatmap_inverted = cv2.bitwise_not(heatmap_norm)
+    heatmap_color = cv2.applyColorMap(heatmap_inverted, cv2.COLORMAP_JET)
     return cv2.cvtColor(heatmap_color, cv2.COLOR_BGR2RGB)
 
 def encode_image_to_base64(numpy_image):

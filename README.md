@@ -27,7 +27,14 @@ backend/
 
 Pastikan Python sudah terinstal di komputer Anda.
 
-### 1. Setup Virtual Environment
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/novalalgfr/saliency-backend.git
+cd frontend
+```
+
+### 2. Setup Virtual Environment
 
 Disarankan menggunakan virtual environment agar library tidak konflik.
 
@@ -45,19 +52,19 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 2. Install Dependencies
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Setup Model
+### 4. Setup Model
 
 Pastikan file model `saliency_unet_model.keras` sudah diletakkan di dalam folder `models/`.
 
 > **Catatan:** File model tidak disertakan di repository ini karena ukurannya yang besar dan batasan GitHub. Silakan hubungi pengembang untuk mendapatkan file model.
 
-### 4. Jalankan Server
+### 5. Jalankan Server
 
 ```bash
 python app.py
