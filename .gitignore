@@ -29,3 +29,4 @@ ENV/
 .idea/
 models/*.keras
 models/*.h5
+cek_model.py
